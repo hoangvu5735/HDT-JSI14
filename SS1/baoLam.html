@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button onclick="render()">Hiện tùy chọn</button>
+
+  <script>
+
+    const food = [];
+
+    function render() {
+      const action = prompt("C, R, U hay D?");
+
+      if (!action) return;
+
+      if (action.toLowerCase() == "c") {
+        const name = prompt("Tên món ăn?");
+
+        food.push(name);
+        alert("Thành công")
+      } else if (action.toLowerCase() == "r") {
+        console.log(food)
+      } else if (action.toLowerCase() == "u") {
+        const old = prompt("Tên cũ?")
+        const oldFood = food.find(v => v.toLowerCase() == old.toLowerCase())
+        if (!oldFood) {
+          alert("Món ăn không tìm thấy")
+        } else {
+          const index = food.findIndex(v => v.toLowerCase() == oldFood.toLowerCase())
+
+          const newName = prompt("Tên món ăn mới?")
+          food.splice(index, 1, newName)
+          alert("Thành công")
+        }
+      } else if (action.toLowerCase() == "d") {
+        const name = prompt("Tên món ăn?")
+        const index = food.findIndex(v => v.toLowerCase() == name.toLowerCase())
+        if (index < 0) alert("Không tìm thấy món ăn")
+        else {
+          food.splice(index, 1)
+          alert("Thành công")
+        }
+      } else {
+        return;
+      }
+
+      render()
+    }
+
+    render()
+  </script>
+</body>
+
+</html>

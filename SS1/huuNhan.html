@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+
+
+  <script>
+    var name = prompt("Them mon");
+    var n = window.prompt("Update món");
+    var na = window.prompt("Delete mon");
+    let a = ["suon nuong", "luon ngong", "dui heo"];
+    a.push(name)
+    for (let i = 0; i < a.length; i++) {
+      if (n != null) {
+        if (n === a[i]) {
+          var hello = prompt("Doi thanh mon gi");
+          a[i] = hello
+        }
+
+      }
+
+
+      if (na === a[i]) {
+        a.pop(i, 1)
+      }
+    }
+
+    a.push(name)
+    console.log(a)
+  </script>
+</body>
+
+</html>
