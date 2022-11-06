@@ -103,4 +103,4 @@ onAuthStateChanged(auth, () => {
 
 window.addEventListener("hashchange", () => {
   renderRoute();
-});               
+});
