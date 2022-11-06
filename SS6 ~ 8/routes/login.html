@@ -46,11 +46,11 @@
         e.preventDefault();// ngăn trình duyệt tự động reload.
 
         document.querySelector("#btn-container").innerHTML = `
-      <button class = "btn btn-primary w-100" type="button" disabled>
-        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
-        <span>Sign In ...</span>
-        </button>
-      `;
+    <button class = "btn btn-primary w-100" type="button" disabled>
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      <span>Sign In ...</span>
+      </button>
+    `;
 
 
         const email = form.email.value.trim();
@@ -73,8 +73,8 @@
             })
             .finally(() => {
                 document.querySelector("#btn-container").innerHTML = `
-          <button class="btn btn-primary w-100" type="submit">Sign In</button>
-          `;
+        <button class="btn btn-primary w-100" type="submit">Sign In</button>
+        `;
             });
     });
 </script>
