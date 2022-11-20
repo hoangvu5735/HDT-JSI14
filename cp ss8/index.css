@@ -1,0 +1,30 @@
+button {
+    background: steelblue; 
+    border-radius: 4px; 
+    height: 40px; 
+    width: 100px; 
+    color: white; 
+    font-size: 20px; 
+    cursor: pointer; 
+    border: none; 
+    }
+    button:focus {
+    outline: 0; 
+    }
+    #minutes, #seconds {
+    font-size: 40px; 
+    }
+    .bigger {
+    font-size: 40px; 
+    }
+    .button {
+      box-shadow: 0 9px #999;
+    }
+    
+    .button:hover {background-color: hotpink}
+    
+    .button:active {
+      background-color: hotpink;
+      box-shadow: 0 5px #666;
+      transform: translateY(4px);
+    }
