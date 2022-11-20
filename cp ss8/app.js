@@ -1,55 +1,16 @@
+// var minutesLabel = document.getElementById("minutes");
+// var secondsLabel = document.getElementById("seconds");
+// var totalSeconds = 0;
+// setInterval(setTime, 1000);
 
-console.log(startButtons)
-startButtons.forEach((button) => {
-    const id = button.dataset.id;
-    const obj = timers[id - 1];
-    button.addEventListener("click", () => {
-        setInterval(() => {
-            obj.ms++;
-            if (obj.ms == 1000) {
-                obj.s++;
-                obj.ms = 0;
-            }
-            if (obj.ms == 1000) {
-                obj.s++;
-                obj.ms = 0;
-            }
-            render(timerList[id - 1], id, obj)
-        }, 1)
-    })
-})
-
-function render(timer,id,obj){
-    const minutes = obj.m <10 ?`0${obj.m}`:obj.m;
-    const seconds = obj.s <10 ?`0${obj.s}`:obj.s;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// function setTime() {
+//     ++totalSeconds;
+//     secondsLabel.innerHTML = pad(totalSeconds % 60);
+//     minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+// }
 
 // function pad(val) {
-//     valString = val + "";
+//     var valString = val + "";
 //     if (valString.length < 2) {
 //         return "0" + valString;
 //     } else {
@@ -57,19 +18,26 @@ function render(timer,id,obj){
 //     }
 // }
 
-// totalSeconds = 0;
-// function setTime(minutesLabel, secondsLabel) {
-//     totalSeconds++;
-//     secondsLabel.innerHTML = pad(totalSeconds % 60);
-//     minutesLabel.innerHTML = pad(parseInt(totalSeconds / 60));
+// // reset() function
+// function resetTimer() {
+//     document.getElementById("minutes").innerHTML = "00";
+//     document.getElementById("seconds").innerHTML = "00";
+//     totalSeconds = 0;
 // }
 
-// function set_timer() {
-//     minutesLabel = document.getElementById("minutes");
-//     secondsLabel = document.getElementById("seconds");
-//     my_int = setInterval(function () { setTime(minutesLabel, secondsLabel) }, 1000);
-// }
+let start = document.querySelector('#start');
+let stop  = document.querySelector('#stop');
 
-// function stop_timer() {
-//     clearInterval(my_int);
-// }
+let timerId; 
+
+start.addEventListener('click', function() {
+	let i = 0;
+	
+	timerId = setInterval(function() {
+		console.log('!')
+	}, 1000);
+});
+
+stop.addEventListener('click', function() {
+	clearInterval(timerId);
+});
