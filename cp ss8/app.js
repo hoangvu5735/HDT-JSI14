@@ -41,3 +41,4 @@ start.addEventListener('click', function() {
 stop.addEventListener('click', function() {
 	clearInterval(timerId);
 });
+
